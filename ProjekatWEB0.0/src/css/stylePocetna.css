@@ -1,0 +1,154 @@
+*{
+    background:white;
+}
+
+#logo{
+    width: 200px;
+    height: 200px;
+}
+
+.gornjalinija{
+    text-align: right;
+    height: 30px;
+    background:  #5271ff;
+    text-decoration-color: white;  
+}
+
+#registracija,#prijava{
+    margin-top: 5px;
+    margin-left: 10px;
+    font-family: 'Times New Roman', Times, serif;
+    background: #5271ff;
+    visibility: visible;
+}
+#registracija:hover,#prijava:hover{
+    color: black;
+}
+#usernamepocetna,#passwordpocetna{
+    margin-top: 5px;
+    margin-left: 10px;
+    font-family: 'Times New Roman', Times, serif;
+    background: white;
+    text-align: center;
+    visibility: visible;
+
+}
+#korisnik{
+    margin-top: 5px;
+    background: #5271ff;
+    margin-left: 10px;
+    font-family: 'Times New Roman', Times, serif;
+    margin-inline-end: 5px;
+    visibility: visible;
+    
+}
+input{
+    width:120px;
+    height: 20px;
+    border: none;
+    border-radius: 10px;
+}
+
+.oglasi{
+    align-content: center;
+    height: 200px;
+    background: white;
+    margin-top: 10px;   
+    margin-left:4px;
+    position: relative;
+}
+section{
+    display: inline-block;
+}
+.imgSection{
+    width: 230px;
+    text-align: center;
+    position: relative;
+    vertical-align: middle;
+}
+
+#fotografija{
+    border-radius: 10px;
+    width: 228px;
+    position: relative;
+}
+.naslovSection{
+    margin-left: 10px;
+    width: 300px;
+    max-width: 300px;
+    position: relative;
+    vertical-align: middle;
+    box-lines: 1px;
+}
+#naslov{
+    font-size: 20px;
+    text-decoration: none;
+}
+.cenaSection{
+    width: 150px;
+    text-align: center;
+    position: relative;
+    vertical-align: middle;
+}
+#cena{
+    font-size: 20px;
+}
+#likeImg,#dislikeImg{
+    width: 15px;
+    height: 15px;
+}
+
+#dislikeImg{
+    margin-left:10px;
+}
+
+.datumSection{
+    font-size: 13px;    
+    width: 200px;
+    position: relative;
+    vertical-align: middle;
+}
+#dPostavljanja,#dIsticanja{
+    font-size: 18px;
+}
+.gradSection{
+    width:250px;
+    position: relative;
+    vertical-align: middle;
+}
+ .dropbtn {
+    margin-top: 10px;
+    background-color: #5271ff;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+  }
+  
+  .dropdown {
+    position: relative;
+    margin-left: 950px;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown-content a:hover {background-color: #ddd;}
+  
+  .dropdown:hover .dropdown-content {display: block;}
+  
+  .dropdown:hover .dropbtn {background-color: black;} 

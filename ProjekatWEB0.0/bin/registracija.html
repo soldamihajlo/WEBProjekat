@@ -1,0 +1,80 @@
+<html>
+
+<head>
+    <title>Registration Form Creation</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    
+</head>
+    <body>
+        <h1>Registracija</h1>
+        <div class="register" style="">
+                <h2>Registruj se ovde</h2>
+            <form method="POST" id="register" action="">
+                
+                <label>Username :</label><br>
+                <input type="text" name="username" id="username"
+                placeholder="Enter Username"><br><br>
+                <label>Password :</label><br>
+                <input type="password" name="password" id="password"
+                placeholder="Enter Password"><br><br>
+                <label>Confirm password :</label><br>
+                <input type="password" name="Confpassword" id="Confusername"
+                placeholder="Enter Password"><br><br>
+                <label>Ime :</label><br>
+                <input type="text" name="ime" id="ime"
+                placeholder="Unesi Ime"><br><br>
+                <label>Prezime :</label><br>
+                <input type="text" name="prezime" id="prezime"
+                placeholder="Unesi Prezime"><br><br>
+                <label>Uloga :</label><br>
+                <select id="uloga">
+                    <option>Kupac</option>
+                </select><br><br>
+                <label>Telefon :</label><br>
+                <input type="tel" name="telefon" id="telefon"
+                pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required
+                placeholder="000-000-0000"><br><br>
+                <label>Grad :</label><br>
+                <input type="text" name="grad" id="grad"
+                placeholder="Unesi Grad"><br><br>
+                <label>Email :</label><br>
+                <input type="email" name="email" id="email"
+                placeholder="Unesi Email"><br><br>
+                <button name="buttonRegister" id="buttonRegister"> POTVRDI</button>  
+            </form>
+            <div id="msg">
+                <pre></pre>
+            </div>
+        </div>
+        <script type="text/javascript"> 
+            let users=[];
+            const addUser=(ev)=>{
+                ev.preventDefault();
+                let user={
+                    id:Date.now(),
+                    username:document.getElementById('username').value,
+                    password:document.getElementById('password').value,
+                    ime:document.getElementById('ime').value,
+                    prezime:document.getElementById('prezime').value,
+                    uloga:document.getElementById('uloga').value,
+                    telefon:document.getElementById('telefon').value,
+                    grad:document.getElementById('grad').value,
+                    email:document.getElementById('email').value,
+                    datum:Date.now()
+                }
+                users.push(user);
+                document.forms[0].reset();
+                document.querySelector('form').reset();
+
+                console.warn('added',{users});
+                let pre=document.querySelector('#msg pre');
+                pre.textContent='\n'+JSON.stringify(users,'\t',2);
+
+                localStorage.setItem('MyUserList',JSON.stringify(users));
+            }
+            document.addEventListener('DOMContentLoaded',()=>{
+                document.getElementById("buttonRegister").addEventListener('click',addUser);
+            });
+        </script>
+    </body>
+</html>
